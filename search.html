@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+
+{% block content %}
+
+<html>
+   <body>
+   <form action ="http://127.0.0.1:5000/search">
+           <p>Search:</p>
+           <ul>
+                   <li><a href="#">Animals</a></li>
+                   <li><a href="#">Anime</a></li>
+                   <li><a href="#">Landscapes</a></li>
+                   <li><a href="#">Humans</a></li>
+                   <li><a href="#">Items</a></li>
+           </ul>
+
+         <p><input type="submit" value="search"/></p>
+       </form>
+   </body>
+</html>
+
+
+<style>
+
+
+ .nav li.home a{
+    background-color: #fff;
+    color: #000;
+    list-style: none;
+  }
+
+    .section2 {
+    width: 100.5%;
+    height: 1000px;
+    margin-top:10px;
+    margin-left: 5px;
+    float: right;
+    list-style: none;
+  }
+    background:linear-gradient(rgb(25, 25, 25), rgb(40, 40, 40), rgb(25, 25, 25));
+    border-style: solid;
+    border-color: white;
+  }
+
+    .sec2-h1{
+    color: white;
+
+
+  }
+
+  .nav li.search a:hover{
+    background-color: #CCFFFF;
+    color: #000;
+    list-style: none;
+  }
+
+    .nav li.login a:hover{
+    background-color: #CCFFFF;
+    color: #000;
+    list-style: none;
+
+   }
+
+    .nav li.home a{
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #2f2f2f;
+    padding: 5px 20px;
+    transition: 0.6s ease;
+    list-style: none;
+  }
+    .nav li.home a:hover{
+    background-color: #CCFFFF;
+    color: #000;
+    list-style: none;
+
+  }
+    .nav li.home a{
+    background-color: rgba(0,0,0,0);
+    color: #000;
+    border: 1px solid #000;
+    list-style: none;
+  }
+
+    .nav li.login a{
+    background-color: rgba(0,0,0,0);
+    color: #000;
+    border: 1px solid #000;
+    list-style: none;
+  }
+
+    .nav li.search a{
+    background-color: rgb(204,255,255);
+    color: #000;
+    border: 1px solid #000;
+    list-style: none;
+  }
+
+.center {
+  margin: auto;
+  width: 25%;
+  padding: 10px;
+  text-align: center;
+  line-height: 600px
+}
+
+</style>
+
+
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block image%}
+
+<style>
+.nav li.home a{
+    background-color: #fff;
+    color: #000;
+    }
+
+.section2 {
+width: 100.5%;
+height: 1000px;
+margin-top: 10px;
+margin-left: -50px;
+float: right;
+
+background:linear-gradient(rgb(25, 25, 25), rgb(40, 40, 40), rgb(25, 25, 25));
+border-style: solid;
+border-color: white;
+}
+
+.sec2-h1{
+    color: white;
+
+
+}
+
+    .nav li.login a{
+    background-color: #CCFFFF;
+    color: #000;
+    margin-top: 10px;
+
+    }
+
+  .nav li.home a{
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #2f2f2f;
+  padding: 5px 10px;
+  transition: 0.6s ease;
+  }
+  .nav li.home a:hover{
+    background-color: #CCFFFF;
+    color: #000;
+
+  }
+  .nav li.home a{
+    background-color: rgba(0,0,0,0);
+    color: #000;
+    border: 1px solid #000;
+  }
+
+   .nav li.login a{
+    background-color: #CCFFFF;
+    color: #000;
+
+  }
+
+.center {
+  margin: auto;
+  width: 25%;
+  padding: 10px;
+  text-align: center;
+  line-height: 600px
+}
+</style>
+
+{% with messages = get_flashed_messages()%}
+        {% if messages%}
+            {% for msg in messages%}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+<form action="http://127.0.0.1:5000/login" method="post">
+    <p> Enter Name: </p>
+    <p><input type="text" name="name" /></p>
+    <p><input type="submit" value="next" /></p>
+</form>
+
+{% endblock %}
+
+

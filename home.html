@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block content%}
+<style>
+
+ .nav li.home a{
+    background-color: #CCFFFF;
+    color: #000;
+    }
+
+    .section2 {
+width: 99.5%;
+height: 1000px;
+margin-top:10px;
+margin-left: -50px;
+float: left;
+
+
+background:linear-gradient(rgb(25, 25, 25), rgb(40, 40, 40), rgb(25, 25, 25));
+border-style: solid;
+border-color: white;
+}
+
+.sec2-h1{
+    color: white;
+
+
+}
+</style>
+
+<html>
+   <body>
+   <h1>Find your art here!</h1>
+       <form action ="http://127.0.0.1:5000/login">
+           <p><input type="submit" value="login"/></p>
+       </form>
+   </body>
+</html>
+
+{% endblock %}
