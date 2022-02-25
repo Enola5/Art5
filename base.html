@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <title>{%block title%}{%endblock%}</title>
 
 </head>
-{%block image%}
-{%endblock%}
+{%block content%}
 
 <body>
 
 <nav>
     <p>Elona</p>
 
-     <div class="main">
+     <div class="app">
     <ul class="nav">
         <li class="home"><a href="{{ url_for('home') }}">Home</a></li>
         <li class="login"><a href="{{ url_for('login') }}">Login</a></li>
-         <li class="search"><a href="#">Search</a>
+         <li class="search"><a href="{{ url_for('search') }}">Search</a>
          <ul>
-              <li class="drop"><a href="#anime">Anime</a></li>
-              <li class="drop"><a href="#">Animals</a></li>
+              <li class="drop"><a href="#">Anime</a></li>
               <li class="drop"><a href="#">Flowers</a></li>
-              <li class="drop"><a href="#">Landscapes</a></li>
               <li class="drop"><a href="#">Objects</a></li>
+              <li class="drop"><a href="#">Animals</a></li>
+              <li class="drop"><a href="#">Landscapes</a></li>
+             <li class="drop"><a href="#">People</a></li>
          </ul>
          </li>
     </ul>
      </div>
 </nav>
+
+
+<form action="http://127.0.0.1:5000/login" method="get">
+    <p><input type="submit" value="login" /></p>
+</form>
+
 </body>
 </html>
 
@@ -113,6 +118,11 @@ nav ul li ul {
   line-height: 30px;
 }
 
+.nav li.drop a{
+    background-color: #fff;
+    color: #000;
+}
+
 .nav li.drop a:hover{
     background-color: #fff;
     color: #A0A0A0;
@@ -136,4 +146,4 @@ nav ul li ul li a {
 
 </style>
 
-
+{%endblock%}
