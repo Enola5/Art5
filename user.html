@@ -1,6 +1,6 @@
+{%block image%}
 
-{% block image %}
-
+<html>
 <body>
 <nav>
     <p>Elona</p>
@@ -8,13 +8,14 @@
     <ul class="nav">
         <li class="home"><a href="{{ url_for('home') }}">Home</a></li>
         <li class="login"><a href="{{ url_for('login') }}">Login</a></li>
-         <li class="search"><a href="#">Search</a>
+         <li class="search"><a href="{{ url_for('search') }}">Search</a>
          <ul>
-              <li class="drop"><a href="#">Anime</a></li>
-              <li class="drop"><a href="#">Animals</a></li>
-              <li class="drop"><a href="#">Flowers</a></li>
-              <li class="drop"><a href="#">Landscapes</a></li>
-              <li class="drop"><a href="#">Objects</a></li>
+               <li class="drop"><a href="{{ url_for('anime') }}">Anime</a></li>
+              <li class="drop"><a href="{{ url_for('animals') }}">Animals</a></li>
+              <li class="drop"><a href="{{ url_for('flowers') }}">Flowers</a></li>
+              <li class="drop"><a href="{{ url_for('landscapes') }}">Landscapes</a></li>
+              <li class="drop"><a href="{{ url_for('objects') }}">Objects</a></li>
+               <li class="drop"><a href="{{ url_for('people') }}">People</a></li>
          </ul>
          </li>
     </ul>
@@ -34,7 +35,7 @@
         <p><input type="submit" value="next"/></p>
     </form>
 </body>
-
+ </html>
 <style>
 
 * {
@@ -127,6 +128,15 @@ nav ul li ul {
   padding: 5px 17px;
   line-height: 30px
 }
+.nav li.drop a{
+    background-color: #fff;
+    color: #000;
+}
+
+.nav li.drop a:hover{
+    background-color: #fff;
+    color: #A0A0A0;
+}
 
 nav ul li:hover ul {
   display: block;
@@ -144,4 +154,4 @@ nav ul li ul li a {
 
 
 </style>
-{% endblock %}
+{%endblock%}
