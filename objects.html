@@ -1,0 +1,153 @@
+{%block content%}
+
+<html>
+   <body>
+   <nav>
+    <p>Elona</p>
+     <div class="main">
+    <ul class="nav">
+        <li class="home"><a href="{{ url_for('home') }}">Home</a></li>
+        <li class="login"><a href="{{ url_for('login') }}">Login</a></li>
+        <li class="search"><a href="{{ url_for('search') }}">Search</a>
+         <ul>
+             <li class="drop"><a href="{{ url_for('anime') }}">Anime</a></li>
+              <li class="drop"><a href="{{ url_for('animals') }}">Animals</a></li>
+              <li class="drop"><a href="{{ url_for('flowers') }}">Flowers</a></li>
+              <li class="drop"><a href="{{ url_for('landscapes') }}">Landscapes</a></li>
+              <li class="objects"><a href="{{ url_for('objects') }}">Objects</a></li>
+               <li class="drop"><a href="{{ url_for('people') }}">People</a></li>
+         </ul>
+         </ul>
+     </div>
+</nav>
+   <form action ="http://127.0.0.1:5000/objects">
+       </form>
+   </body>
+</html>
+<style>
+
+*  {
+     margin: 0;
+     padding: 0;
+}
+
+ body {
+  background-image: url('https://media.istockphoto.com/vectors/abstract-template-black-frame-layout-with-green-neon-light-on-dark-vector-id1136756218?k=6&m=1136756218&s=170667a&w=0&h=aFzgo7zKQQl4SCQAtSWSTHW56FMk2TKCBX78a2z7O54=');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+}
+
+nav p {
+  font-family: Century Gothic;
+  color: #222;
+  font-size: 26px;
+  line-height: 72px;
+  float: left;
+  padding: 1px 17px;
+}
+
+nav ul {
+  float: left;
+
+}
+
+nav ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+
+}
+
+nav ul li a{
+  display: block;
+  font-family: Century Gothic;
+  font-size: 18px;
+  padding: 28px 10px;
+  text-decoration: none;
+
+}
+.nav li.home a{
+    background-color: #fff;
+    color: #000;
+}
+
+.nav li.login a{
+    background-color: #fff;
+    color: #000;
+}
+
+.nav li.search a{
+    background-color: #fff;
+    color: #A0A0A0;
+}
+
+.nav li.home a:hover{
+  background-color: #FFF;
+  color: #A0A0A0;
+
+}
+.nav li.login a:hover{
+  background-color: #FFF;
+  color: #A0A0A0;
+
+}
+
+nav ul li ul {
+  position: absolute;
+  background-color: #fff;
+  padding: 5px 17px;
+  line-height: 30px;
+  display: none;
+}
+
+.nav li.drop a{
+    background-color: #fff;
+    color: #000;
+}
+
+.nav li.objects a{
+    background-color: #fff;
+    color: #A0A0A0;
+}
+
+.nav li.drop a:hover{
+    background-color: #fff;
+    color: #A0A0A0;
+}
+
+nav ul li:hover ul {
+  display: block;
+
+}
+
+nav ul li ul li {
+  width: 130px;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<div class="pa-gallery-player-widget" style="width:100%; height:738px; display:none;"
+  data-link="https://photos.app.goo.gl/4eDS2ZC2Fsxy1Guj9"
+  data-title="Objects"
+  data-description="3 new items added to shared album">
+  <object data="https://lh3.googleusercontent.com/OXZgQLc67s25EtjbQHAaQbmQrmLap_watV261QV47EmDFJEm52Wy6kW4je-nDWqlfIpTXbjTpsxxjIDs7fHQTR-nKz6V8XBZZbg9FgfnqliCzKueStRY4intc75XPBs1k044ctPi=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/-K6VB-ShWs82vk--PJ8Ahmoi701_iQX8a2OULyDZ_oGmHEJkv4q9I_6hBDjNfHBQFuA8L_ClH2rtjSMQJkyqERNp6FfCrLpFgcQoM5roAClui7dizYmkhNF9EIkrFO1qKvghyDM7=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/txF9Tt4Tkgbmb3r1qC48o0vNtB-B7ZsD-vf8STmpKOa15o5Jzv5i3eRfMlh-z2BTzrhFisPGVHDbYr_8SMMmPbr5Ggy5sapofPuFkGtKSOC1dRuF4NFnhPcX1KJlvDo3Y5G35MWi=w1920-h1080"></object>
+</div>
+
+{%endblock%}
