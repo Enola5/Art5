@@ -1,5 +1,4 @@
-
-{% block content %}
+{%block content%}
 
 <html>
    <body>
@@ -9,19 +8,20 @@
     <ul class="nav">
         <li class="home"><a href="{{ url_for('home') }}">Home</a></li>
         <li class="login"><a href="{{ url_for('login') }}">Login</a></li>
-         <li class="search"><a href="#">Search</a>
+         <li class="search"><a href="{{ url_for('search') }}">Search</a>
          <ul>
              <li class="drop"><a href="{{ url_for('anime') }}">Anime</a></li>
               <li class="drop"><a href="{{ url_for('animals') }}">Animals</a></li>
               <li class="drop"><a href="{{ url_for('flowers') }}">Flowers</a></li>
-              <li class="drop"><a href="#">Landscapes</a></li>
-              <li class="drop"><a href="#">Objects</a></li>
+              <li class="drop"><a href="{{ url_for('landscapes') }}">Landscapes</a></li>
+              <li class="drop"><a href="{{ url_for('objects') }}">Objects</a></li>
+               <li class="drop"><a href="{{ url_for('people') }}">People</a></li>
          </ul>
          </li>
     </ul>
      </div>
 </nav>
-   <form action ="http://127.0.0.1:5000/search">
+   <form action ="http://127.0.0.1:5000/search" method="post">
        </form>
    </body>
 </html>
