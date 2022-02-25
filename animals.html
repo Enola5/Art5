@@ -1,4 +1,4 @@
-{% block content %}
+{%block content%}
 
 <html>
    <body>
@@ -8,9 +8,14 @@
     <ul class="nav">
         <li class="home"><a href="{{ url_for('home') }}">Home</a></li>
         <li class="login"><a href="{{ url_for('login') }}">Login</a></li>
-         <li class="search"><a href="#">Search</a>
+         <li class="search"><a href="{{ url_for('search') }}">Search</a>
          <ul>
-              <li class="drop"><a href="#animals">Animals</a></li>
+             <li class="drop"><a href="{{ url_for('anime') }}">Anime</a></li>
+              <li class="animals"><a href="{{ url_for('animals') }}">Animals</a></li>
+              <li class="drop"><a href="{{ url_for('flowers') }}">Flowers</a></li>
+              <li class="drop"><a href="{{ url_for('landscapes') }}">Landscapes</a></li>
+              <li class="drop"><a href="{{ url_for('objects') }}">Objects</a></li>
+              <li class="drop"><a href="{{ url_for('people') }}">People</a></li>
          </ul>
          </li>
     </ul>
@@ -81,7 +86,7 @@ nav ul li a{
 
 .nav li.search a{
     background-color: #fff;
-    color: #000;
+    color: #A0A0A0;
 }
 
 .nav li.home a:hover{
@@ -100,10 +105,15 @@ nav ul li ul {
   background-color: #fff;
   padding: 5px 17px;
   line-height: 30px;
-  display: block;
+  display: none;
 }
 
 .nav li.drop a{
+    background-color: #fff;
+    color: #000;
+}
+
+.nav li.animals a{
     background-color: #fff;
     color: #A0A0A0;
 }
@@ -111,6 +121,10 @@ nav ul li ul {
 .nav li.drop a:hover{
     background-color: #fff;
     color: #A0A0A0;
+}
+nav ul li:hover ul {
+  display: block;
+
 }
 
 nav ul li ul li {
@@ -124,6 +138,45 @@ nav ul li ul li a {
 
 
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<div class="pa-gallery-player-widget" style="width:100%; height:741px; display:none;"
+  data-link="https://photos.app.goo.gl/DZFkBruVdhCLhNrL7"
+  data-title="Animals"
+  data-description="32 new items added to shared album">
+  <object data="https://lh3.googleusercontent.com/D36UTsSGRmnrsS7GUdTm27ujaIbAeLAAi1RFHyn-w8Yr9Wkc0tkWXh7gjcSqCY7osA2Eqp2m0J2g_JKr0sdv3F72V6ZJ-VzEtsTybKIyTJJR-r2Tsoas-hdWK3NH8ty_c5mgnmN6=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/GpJFh__ErRFZ1PW8hEXFfLtYl0eE9spZvIcVIfN_HdFp9qi-0vN3mhdZYP0HkbNjp1HFUF42Hn-cxDSt8QpJi_0y2in4lAjoMTvyYsqp6T93Ko6oUDTmXE8zp5R7HSD0tIDnTz89=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/YZwVXMbjxo5dOG7u7_KBr4yO6mCz30mrcogGhZxFszN-M8A6vTQgnYq5LiIx52pJEWhIY5PIUcHJyibwwMZDkxK1UFQ8XwlQsLR46WNwK1AG7FunD66cghss4zWtxT145TU0dLEC=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/o6loo4pFGpuoeLoqtcb0i79s1GUeXiN8FZATTxGgwuhvbNwROUwci-ntumyIaRZ-p0Cl_wdEHts_1tgOPNVvJllG7ia-pYJ1bocOmk80qHbD1sMeKEQ_UkHvYegz6kjH6kvOVDWS=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/nRMsw5y-GGhBtY8gYM9VBe3fXX6iKzFSUIn-3rWTt4Ly7d-_x87MofiEOBrcoajIbw2mAbZchfok8XJ0_g_xClERvN4RRMNHVwPqAHU4oAK712DqdjtOFCczsNWQU3DFK02hpitD=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/qLh0FVW_q8Tlg9_YCNcersDchZhGpdKDPkSDF6eI-Z04dI-ODXJqrx5fsWk-MZviGP4SWMjJatIyFE6_ZaDHOqihzQuVlKmPPl836OAx9EVHvvD-J_psyds1dveDUZPu1ocDrqzs=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/FHM7kXprCIlkf4RAtM0yljXeZtGv_WYQROHjdKOwqyg9HMX5IdKxNsJNqK0nf0z8CDKWlraFXogfFl0X28UcXsO2lDCDdbpSOTg7NyKO1l0BLmQ-riQYi1DFK1nfzX53fz2y9mg3=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/u4AtuSZVqqQ86cPTnuRprMxkdDXn9BLUGone0mJuJTNxdEL4vmTOQIVj6qIS6JyB0xV2ha3h-sLTQm0korycP9EkW5mG6VTkNsJA7ydwrUg_yTU6XrlFQ9nVAqIe1MWfKXFuJUGX=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/yI5JSGeIJYZCJYW_rB5rA6gOGwgkpmiuqJfP-lczVljy4vAMqJgLpIrt9OLj1ruOlbacwg9ZE8REUC18QsXULccJanEDcxNoqh1HQ3YZqHOIuH3W4P3xB2zqbFC97fVdShgsRYb-=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/HV3GP0RxGUQA_p37kULOfw1jaWs58meZF1E67Yspbc6opLzHAT8ZdUs5idz6FLnu8jdIoSZvp-uzo5X2bbOYDAhRWmmBTVMJ9OhrQolPKpIPc_6ue_JAd-XYBngDdBY7Axs5BSr1=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/MyBZLgRNCnnM84-g6z2hXr9VhlW2545pQ5JHzqJDc3d8FWNWDD2vSo-hUUS3tjBH-bpD7xr_hWmnObpsxVxdHjsGCYx_FXZ0HQgPw7HBgwnVIWjl6UdZ5s4-7Gow0gL2xu-20pl3=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/LLZGfqB-5v1iSuWfJCS2DRv5qLChzYDoi3TnURJbW8llWBlEi6xtlr69pPLjK9pfB1rTwxEK70DYSchxft31PUN2aIhtNOYwhCkffnooUCpCverYe1O2VeIq7mRqZlcj3_Z7Ootu=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/InP8KpoKfJs_cKXvAiyMIZtMQOrZk7MXxAkoBYee4jpxttTV8OF7dTht6QNd656SS4LvmNJ3k-WrcA_l5hHFfYPBdoEqaSSy5M7mattogKni7J3kP9nZRow8f86IHV3mc5lRTv0v=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/kgqUUvjLaj4Ty2GBMrme_T3NcE8aw849W-3b7gzmN8ukMhAMq123csRvRQDg7U5K0rnw940MqWmYcRXxfsmvtObkmyYeN1Il5HDJ_50_xrRoASmof4NFNJmCCQawoplGqEZnzfSt=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/WM23a2N2nwe0WDrLgI80kXLaDW3S8CgaDzHXJqIPsYSV8xGB-XtddYJpaUPteJu6wcAjWwtJ7sL_mmWmS0uOEDlEr_htvtuLQQyaE4WcIGyzrnpJ4BTBY33YcoJRU4vVcthSzQSd=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/UcbU683rZOXGq2cRtsWqDRmQPZnsO7BJaUhiusaHJIE-zWibjG6nXYe1aKhod-6M-N2CcolDxZX9My2sRRdJflyEl9hKXP5Nr81TNnpOubPS3jvwUSd4eylMnTOjzwtVV-rJmYNW=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/3UqfRhNRYWm7bRKry0CDuWrRKN8BcVeUPFSvV7TAzwQvNuRnBL9M8IePqIBh0CJNoaVHdYvn1JUn36hs2qi3TNVEIIEgUZTRvYBv7qSiaiDQ0g8zZEk6ht86rnY886Y1EgvbHT2C=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/9B71H4gqSFMblsjbM5Bw-sovK6ZU7RYHQ5PkZbEBPaTGBtk8L4S7L1yEJIvqlKz66Y5hF7u0GMrehHT0lksanrny9rAp6K-RUoHb5fdSOQvTxNS467hfFCbeTcJtdjToqVO8hZA7=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/e8txncmscdX9D7lQlhAdsCo3EER9RKHS2ggTjUmn4fQFxFw2fFH_lGSa8lVqwH6CNq_KqA9gAo2mzuf2RBPjL3kxPS2NyVc0jBdmNB7PqoFECwDP9I2Vmnwadd4ky9DMkzF9n3kI=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/qFsPGiH0gmpbaKnAZOlATELRpxviCs2V_J6uOB_jaY9y0YzrrI7hHVXKjQguRYM2f0GhZ9roVRNH00W-dVvC_MkEXawluKB3nYYd5z1AanosWJ8t57i8DG8GxwD4F3F6fhSHHiqn=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/F5CFre0jkWsX25U-pL_MC2hIy7dg_dg2EYxSqkKRh7TxCrYewiCIgBRb6F7P3JdlOwJlNvUdhM7waZDTgF08TNLl6RqpxyuwFY6L4fdAXeofWdkfnl4-G9UKRNyNjN48wGuv5J2l=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/lCWwFjY1p_3WVaS6yt8bs-XgEi46fgcWuPRvInhF73twAw1NVR7HAM2TmFghvA8JWRMPPNXalt0wTXAUzeCdQyeVj2yt1o4BGi6krJQbdYOB66WFM2JseqQSTkqQJ8M8fKEiLecP=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/PTO9tH2smTBiL77wHbM5uUYgaqjKD4OquyBXQ-oeYcmneJ-EcGm2LT9mNsrfK2Umq_XTntMMM8y1ugM8b1UXa_s7397axgmOG1F1iTBkXXSR8vIWAnYjBBwWaQWiKQSny4SVWE4M=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/PKm_TI4McF4d04qEAJ_Frjdr2jdi4R7puRTQq5T9JokPujRTS43iDez37bwqRhewrx5XG1PQPUtNuOOu3FPCQB-KjltdRyRKdK1f86QoXxk7Y9F2JoOpTk5XN8cl-U-SPzrun9nk=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/E7_fm88Lg75oG2BqT-i3FCIBGnEqDCSGvjAUg-JZaNHhyrgaachhCAN_5SoRk8Eto9vmELXJbCv2URn3PNfzuqeI7jQWscSu4P71sAA2_arKm_uSFkIWYjOiCC1Ihu2vNUnwYNM4=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/FUB--_YyQbUbVcYNuOqoqdd5Uc7MFVo21N8rLEykB_srdUVkLv7v84IT9AFa_DYEVg-PBgtPRoFa8LBWVuJCGeuFUXinQZBH8SYdEWnToN1nz7v4mBuTjmlAUrQ2KAtNvOh8CqX6=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/ywVXwbJe5FA_MqMOrsv2C9XpzTBQP6nBIQrgD6sTnHngcsvkFtuCULiKkTYfwDmmHPg_SRgtbkxhwJao01RjTqS2yN-DAWFWghtrNxtvB1pqSjH7U0qmuRIaV0GL5bezyMHdCgn8=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/iPiVEiFegaDz3NvzGW7OLCvYTja5JF1SbHEdx5RJ7cwo7yud6wA9YWF1cz2RATZKZTNQwqcXoAMJOvAHgNXiyaQ6KtVdL65CLoGWcDQVJOgJ-pTRiSVbPUF-4aFLAyVPHKGzHkVN=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/ricaOKQzaUMc1J5CmNjU2zLH-uKDKx6Ze1yRxePeRt0qgQmfGd4pL2Dihj_y90Zap_gC3UK_5onex08fwsONd4fyO4cMlZVmImJKaTuXlxwS8v7weVCmApNLcFCijsvAUQik2R9d=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/0fQqG85Kbtm0Fd6hfzB8elk1icHndKdj_2R4Mzsie0xtbjDUunnvesNt_GobruDpcikxriBF_Xaipu2O9_zpmBqH7teCdb0cJ83gZnxFuU6QHS1TVBN4d0UpWONGuAj4vCMoWGc2=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/z6eHD-EpWsP_MK-PkIgEhgPZ3MTlcTZMF9fdnWlhA9e_DD5m0K2h308lQg4X-e6104wsVGcOOMPM94ee94jTZdRl_MpCW9tElmsJAHbw1iZlSUWJlPNHAfMpRUeBAilfwGA4E0A1=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/NtmwfRnAMrgavL77t5WBnzsY1l31BwhshwHlWAxDZmxQMAcNJa3BbL8Md_TA5gBboA_CC-mC7d3ljy-YYv4uFA4_3fqYOYfLHoGkbNgbzmFRW_vuPjH7AGclQkG0W1VDaPW0dMho=w1920-h1080"></object>
+</div>
 
 
 {%endblock%}
