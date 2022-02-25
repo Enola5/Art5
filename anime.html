@@ -1,4 +1,4 @@
-{% block content %}
+{%block content%}
 
 <html>
    <body>
@@ -8,15 +8,21 @@
     <ul class="nav">
         <li class="home"><a href="{{ url_for('home') }}">Home</a></li>
         <li class="login"><a href="{{ url_for('login') }}">Login</a></li>
-         <li class="search"><a href="#">Search</a>
+         <li class="search"><a href="{{ url_for('search') }}">Search</a>
          <ul>
-              <li class="drop"><a href="#anime">Anime</a></li>
+             <li class="anime"><a href="{{ url_for('anime') }}">Anime</a></li>
+              <li class="drop"><a href="{{ url_for('animals') }}">Animals</a></li>
+              <li class="drop"><a href="{{ url_for('flowers') }}">Flowers</a></li>
+              <li class="drop"><a href="{{ url_for('landscapes') }}">Landscapes</a></li>
+              <li class="drop"><a href="{{ url_for('objects') }}">Objects</a></li>
+               <li class="drop"><a href="{{ url_for('people') }}">People</a></li>
          </ul>
          </li>
     </ul>
      </div>
 </nav>
-   <form action ="http://127.0.0.1:5000/anime">
+   <form action ="http://127.0.0.1:5000/search">
+
        </form>
    </body>
 </html>
@@ -81,7 +87,7 @@ nav ul li a{
 
 .nav li.search a{
     background-color: #fff;
-    color: #000;
+    color: #A0A0A0;
 }
 
 .nav li.home a:hover{
@@ -92,7 +98,6 @@ nav ul li a{
 .nav li.login a:hover{
   background-color: #FFF;
   color: #A0A0A0;
-
 }
 
 nav ul li ul {
@@ -100,10 +105,15 @@ nav ul li ul {
   background-color: #fff;
   padding: 5px 17px;
   line-height: 30px;
-  display: block;
+  display: none;
 }
 
 .nav li.drop a{
+    background-color: #fff;
+    color: #000;
+}
+
+.nav li.anime a{
     background-color: #fff;
     color: #A0A0A0;
 }
@@ -113,6 +123,10 @@ nav ul li ul {
     color: #A0A0A0;
 }
 
+nav ul li:hover ul {
+  display: block;
+
+}
 nav ul li ul li {
   width: 130px;
 }
@@ -124,6 +138,23 @@ nav ul li ul li a {
 
 
 </style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<div class="pa-gallery-player-widget"  style="width:100%; height:746; display:none;"
+  data-link="https://photos.app.goo.gl/awA2yLic16MMAdps9"
+  data-title="Anime"
+  data-description="8 new items added to shared album">
+  <object data="https://lh3.googleusercontent.com/5lE6dD2tXCfAiKM3ez9XbBbMeDjeeyjH9DaAATC_PLDC0AlK2l6qsup1qdEnO09WD-1690fGW99UH-4F-ccQ5j0LPp9oHujDuO2pSt8G41jd3vomYKbxS5Z8vEAylM8I3Vb6L3jq=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/zCX3uSzhYMCq33iZDCRHPLqqMZRf4vG8nNqmm4p--xXwRz6og4Xc0m1dr9ZeFnQVIlUuRMv_-b7_4ce3g2sZHjEpW6MRZVsR5Mng_YfRjm7KX152H1IJ7v0cWL6mo2deX5XBV61Y=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/8WvfqISd-jvXbFvYDKYi2dL_2AB2sBAwQwTfAouBeMySuFGjdtj0BAIZXtvlRYt7hZnMmLadalgxT2ITUgTnFTLI8sz44H1K0oBh3AvJ0GMzMtV6J0vwLOCrQRx5voHoA3M1nk9j=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/vAFeKDYI1RCoTCht4DH-l6_kY41N34twHoluQVklhD2LJXfDlfiZVuk-nvxSDYjGxQgoGjCbO7Z9jm0rPN_DtgPkj2geJALETck70e1hGYYG-7mhhzVj4N1muoCBUd2kbQmqriL2=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/NWnGcEQ4j7p_8Mz1UoUxslqAw8uHp_kXNL6XMwK3YH8zn-zPvM_mDdeMGayh-QfCg8KCaHjSQRniek4_due5z0dTMkiNjzXkMcndaxx1bewd7R_-_k77ufmCOkCePc1nzrahMwjO=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/kV4kT8N6XEq6HpzKy16GaY0p2fXxZv-k9VszEqc0tAJEYgRjluU8APPGrQ6sbqWcHiTPE_Yvvm1UMbS329YMDmfTwTXG9K-GkTX_oIdQegzOiJm_Xhb1keY80u_DHw1RuskZFqrs=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/w4hxWzf09kVIw_AWs4aELP8k_rMA0SGByMLtoj-XHUTTPqwDAIyetwYWoJtE8BmKb1_qUJ8O5ljDD-jQ32VJ1uP6Wyr5xYutBkU_tAQucGAPX4JlE_CSOwosI8id1k70pYqRON_g=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/5bT3hW_GbcdnHF2WbNDQDSOsd_-9HR9d1R_Q4tAfxQNnltSWBU7FZnM5gyIuOvRuSHU-ku2FK8u7pygNLFFRGh7BKh4o5yGE1UwlV8jmf6xWOoeufxK1K2mHhm0PlDddIecuxK1S=w1920-h1080"></object>
+</div>
+
 
 
 {%endblock%}
