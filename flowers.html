@@ -1,4 +1,4 @@
-{% block content %}
+{%block content%}
 
 <html>
    <body>
@@ -8,9 +8,14 @@
     <ul class="nav">
         <li class="home"><a href="{{ url_for('home') }}">Home</a></li>
         <li class="login"><a href="{{ url_for('login') }}">Login</a></li>
-         <li class="search"><a href="#">Search</a>
+         <li class="search"><a href="{{ url_for('search') }}">Search</a>
          <ul>
-              <li class="drop"><a href="#flowers">Flowers</a></li>
+             <li class="drop"><a href="{{ url_for('anime') }}">Anime</a></li>
+              <li class="drop"><a href="{{ url_for('animals') }}">Animals</a></li>
+              <li class="flowers"><a href="{{ url_for('flowers') }}">Flowers</a></li>
+              <li class="drop"><a href="{{ url_for('landscapes') }}">Landscapes</a></li>
+              <li class="drop"><a href="{{ url_for('objects') }}">Objects</a></li>
+               <li class="drop"><a href="{{ url_for('people') }}">People</a></li>
          </ul>
          </li>
     </ul>
@@ -28,7 +33,6 @@
 }
 
  body {
-  background-image: url('https://media.istockphoto.com/vectors/abstract-template-black-frame-layout-with-green-neon-light-on-dark-vector-id1136756218?k=6&m=1136756218&s=170667a&w=0&h=aFzgo7zKQQl4SCQAtSWSTHW56FMk2TKCBX78a2z7O54=');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -81,7 +85,7 @@ nav ul li a{
 
 .nav li.search a{
     background-color: #fff;
-    color: #000;
+    color: #A0A0A0;
 }
 
 .nav li.home a:hover{
@@ -100,10 +104,15 @@ nav ul li ul {
   background-color: #fff;
   padding: 5px 17px;
   line-height: 30px;
-  display: block;
+  display: none;
 }
 
 .nav li.drop a{
+    background-color: #fff;
+    color: #000;
+}
+
+.nav li.flowers a{
     background-color: #fff;
     color: #A0A0A0;
 }
@@ -111,6 +120,11 @@ nav ul li ul {
 .nav li.drop a:hover{
     background-color: #fff;
     color: #A0A0A0;
+}
+
+nav ul li:hover ul {
+  display: block;
+
 }
 
 nav ul li ul li {
@@ -124,6 +138,33 @@ nav ul li ul li a {
 
 
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<div class="pa-gallery-player-widget" style="width:100%; height:747px; display:none;"
+  data-link="https://photos.app.goo.gl/3YZnGZSu1TGEPtz28"
+  data-title="Flowers"
+  data-description="19 new items added to shared album">
+  <object data="https://lh3.googleusercontent.com/pMidRGMmZSZTU8rKyhwUCjFuIVMLWUXyTK_GZF2tIqdanlvUR_Se_m_BNG2AuqmdYyuUUdBbeoVvtsd7Q3HXgEDaWJ7zgDZ_hEk7harJjVeHP7EPAykIP4vKUdjhMoviAusyuhMU=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/R02IJJE_JBWoW1fKhcEL368dvcsVAwuAhT5-_TyiuzW95H1PgTmhlbZoq5Q-fAtmVmAUWjpd25ndQxDz64exumuj6V0JoE7kgx2d9BaTK4auPMWtpKXmhYSg4a1gtbrtpOOTqzHG=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/9n2Nod63Z4BV8CYo5GSagQrnWf-PIf7aoe3z5GPiztDKNtVzIgga6qPUc0T3KvTCLY29SAIKVDE_8l_669TzD5_WlAMKAU9ukp740XcdyO_VlfEzirltevxlk1Tybg1v5H8yU0Wz=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/aiWtvKYJqPDcsDhZyYrhWK_C5snN1d7nxWLgwStvfPl7BSwmIJ2J-gvICfvhsXpYId8AtI7s4d509K_GBUOzGQAls83B-0yUDjzl8-BkIWySKDLhFT2MHLGdKJG09nWTyvKef047=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/ybKVVpNCva4wTOUWHHmZ6rd3N7ToFKhY-y7gRYXRp6LgSWDifnmWC_wNN96wFpTtHf7QQt-l0stfWytheJiPSfDAPik24ikuK_I2DZxPeg9EWqAWiBz67hiGiryqqXFPxCMBdKw-=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/q9zp3fYbylDTzTDW1zvfIHzrGE9QT54VdvBrgmBQdR4VOMNR1XbZ8xWCTF6YIUacFALtuRKljz1oJfQ5kd2-Kd_unPKvO-0BPh5p3p0MS_ecLuOzOVNrujs2KAxyWF_2oeecT5Qs=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/eyRpdro7fgKwca1FjqR5M-xxceWddrTiT25GhMAavPhXv2B-Rt0E0jRstbSgeecbOQVm0GCWSv-X9jCqdge-TmIugV9tH5VnKhgfAZG72AV48g46cB8THwMI-Hz-VslqqfVi_GMP=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/zlP1J2M5F99XJAybYrXjhqKGekra0IRnYtGQRGKuMmEmly76PyAAWbL4tP69py57ZfGfndQ5ocNh-8BzoA3AUflvN1lhZVOeqN__6WzaV-NDFWtQPSb82vZEGrc6D_PHj-sqZN87=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/RPK1hjWl03Dp1wivEZIL4uTvzuzaAaY8zFaUC5AMn0rxaqCCTJfcFv_jAZx3PC2HKiq_1sVOrgDiijrvqbJdy9OVTxoOH7G5mcsG8vvUdPs7gMR07ZOLgBwjIa6_eyg7sWacWW_H=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/dbrK2zGoPts488pYcrlSyIlEQ-be-oG1h8O5RpZPVJcpNATk1fmLynHwwrqqcZv-HohjyWFERMlJf6cAoR1pTEBP8-CH65oxRph00xn7T4qbLJtSWzrerRZ0D5_zZnnoY4NYdS9G=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/fq6oDKdV4fa1r5zwUxrLFlBm15Avu1GNdEw77eZQhJaX572BrFdl2ctPD6N_vCW4tW8vF4ZK2SwUrJ28_AnEKGuqqqSaN1caplTe8zNSZeHG_Dl9Lf5oxDhZLWfM_Kyd8PFHWTMj=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/YqtkcoxljzUJaBUpwaV_xKO_i34Mk2adaQTEQI1i1HFLmozjJkKwBJbzAyI3xftfVr5tCdLMhVHlNZhVjUvJDDhYzyiIJUbW-NIBZ6arujwO5oUK1tOOhvXNe1Ek6HLmcVHFiN-U=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/JBpyz0dvaCI3pThDkVVyCuWgLbLVw32ksmhYLSXCTt1Z-FOQ4WSLnWVbRBK3zuzSA3DqZoPlNW7kueGlGO5KR9gMRxEoxBiXN4O4qZNxmnVXxR_jrYM3dFEAuqGsNH_9gRS7El9e=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/Ly0dkQQfzEkiAS-nUtcFuBOK9m6Z4JW60KuNn-xUbut1WB8scPG_zmdU6bp5takMZ5bQ-UaFhmwj-pSqMs_PGHI_TFD3E1L85d9YNFbRlL8fZve7C6idm8aEXKWz7ZRc0qLLHX9Z=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/NeSmaWm74d0tYASJFPJ_WCbGnJz67GpQE0582lUIq1lwshcnG8GjCGrCTdLqXJM-YlaL8kQZEPdc06y5HiBv2l9_WvXftqnWzznmAwYH5e9pEddL01LRewm2rlXSm2IeVeoiYh1d=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/tCdRxB00E-puGR3fHitXDXBcFvyGo83LFmevGyCiXEavJGy302vHIUL9fV3Dn6h8CVDQneJy0mNtVwM6KLwEl78PXMLiUcfs4N1HwtbNuQ-N82HeB0HAkeNLccWXwxjyNNa8A5Gh=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/ghyPDtvl1_3qWmtdaKHGkiYhFQQxa-35tbBwG6w0KNXrUReLMpCkP2mHefkU8dpk2YmIwlMECbMUqvdNB18n85pwoqGWxoHfW1aRufylc439y7_Do1HB_UTcPCbTA0jwha5RP0tv=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/loASaNjVk2LR7HKQwgh_99ri0xsZYmrRpp42aDXq70yvQm1wbaGLWGfYWWC7G2o9J_StgOVUDjONB0tzVr0YEp8NdiltLZ8XhZtN4jGFv5ta_3s_-FUEbICsvDpGbIA4uwkAUjLB=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/PYoIqXfW70mlW7gr96B0kVgGoLw1FqT7AepFX99NfofjbnzoEEW_BYKHZs8CXUOhUEu0Ps4aqEIeJSXDmDhkjZkgF33yfvIFGfy43drThtq-EkTUPafL629QOkFjVh6wCRiwIcr3=w1920-h1080"></object>
+</div>
+
 
 
 {%endblock%}
